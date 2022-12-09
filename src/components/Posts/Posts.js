@@ -9,6 +9,7 @@ const Posts = ({setCurrentId}) => {
 
   if(!posts?.length && !isLoading) {return "No posts published yet";}
 
+  
   return (
     isLoading ? <CircularProgress/> : (
       <Grid sx={{ display: "flex", alignItems: "center",}} container alignItems='stretch' spacing={3}>
@@ -17,8 +18,10 @@ const Posts = ({setCurrentId}) => {
                 <Grid key={post._id} item xs={12} sm={12} md={6} lg={3}>
                     <Post post={post}  setCurrentId={setCurrentId}/>
                 </Grid>
+                
               ))
             }
+      
       </Grid>
     )
   );

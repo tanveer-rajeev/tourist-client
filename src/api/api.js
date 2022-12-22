@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API = axios.create({baseUrl:`http://localhost:5000`});
+// const API = axios.create({baseUrl:`http://localhost:5000`});
+const API = axios.create({baseUrl:`https://tourist-server.vercel.app`});
 
 API.interceptors.request.use((req)=>{
     if(localStorage.getItem("profile")){
